@@ -17,9 +17,9 @@ function App() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setTotalTaxes((Number(price) * Number(tax)) / 100);
+		setTotalTaxes(price * tax / 100);
 
-		setTotalPrice(Number(price) + (Number(price) * Number(tax)) / 100);
+		setTotalPrice(price + price * tax / 100;
 	};
 
 	return (
@@ -31,7 +31,8 @@ function App() {
 					<legend>Calculadora de Tax</legend>
 					<label for="price">Cantidad</label>
 					<input
-						type="text"
+						type="number"
+						step="0.1"
 						name="price"
 						id="price"
 						placeholder="Cantidad"
@@ -40,11 +41,12 @@ function App() {
 					/>
 					<label for="tax">Tax</label>
 					<input
-						type="text"
+						type="number"
+						step="0.1"
 						name="tax"
 						id="tax"
 						value={tax}
-						onChange={(e) => setTax(Number(e.target.value))}
+						onChange={(e) => setTax(e.target.value)}
 					/>
 					<button type="reset" id="reset" onClick={handleClear}>
 						clear
