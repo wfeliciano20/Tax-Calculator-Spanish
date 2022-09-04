@@ -17,9 +17,9 @@ function App() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setTotalTaxes(price * tax / 100);
+		setTotalTaxes((price * tax) / 100);
 
-		setTotalPrice(price + price * tax / 100;
+		setTotalPrice(price + (price * tax) / 100);
 	};
 
 	return (
