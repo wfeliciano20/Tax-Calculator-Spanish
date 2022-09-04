@@ -58,8 +58,8 @@ function App() {
 
 			<div className="Total">
 				<h3>Cantidad: ${price ? price : '0.00'}</h3>
-				<h3>total de tax: ${Number(totalTaxes).toFixed(2)} </h3>
-				<h3>total con tax incluido: ${Number(totalPrice).toFixed(2)}</h3>
+				<h3>Total de tax: ${Number(totalTaxes).toFixed(2)} </h3>
+				<h3>Total con tax incluido: ${Number(totalPrice).toFixed(2)}</h3>
 			</div>
 		</div>
 	);
