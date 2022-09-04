@@ -17,9 +17,10 @@ function App() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setTotalTaxes((price * tax) / 100);
+		const totalTax = price * (tax / 100);
+		setTotalTaxes(totalTax);
 
-		setTotalPrice(price + (price * tax) / 100);
+		setTotalPrice(Number(price) + totalTax);
 	};
 
 	return (
@@ -57,8 +58,8 @@ function App() {
 
 			<div className="Total">
 				<h3>Cantidad: ${price ? price : '0.00'}</h3>
-				<h3>total de tax: ${totalTaxes.toFixed(2)} </h3>
-				<h3>total con tax incluido: ${totalPrice.toFixed(2)}</h3>
+				<h3>total de tax: ${Number(totalTaxes).toFixed(2)} </h3>
+				<h3>total con tax incluido: ${Number(totalPrice).toFixed(2)}</h3>
 			</div>
 		</div>
 	);
